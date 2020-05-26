@@ -1,0 +1,80 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: green;
+.asd1{
+    background-color: gainsboro
+}
+.asd{
+    background-color: gray
+    font: 300% $font-stack;
+    color: $primary-color;
+}
+.asd2{
+    background-color: gold
+}
+div {
+    ul {
+      margin: 0;
+      padding: 2;
+      list-style: none;
+    }
+  
+    li { display: inline-block; }
+  
+    a {
+      display: block;
+      padding: 12px 24px;
+      text-decoration: none;
+    } 
+  }
+@mixin color($colorEx) {
+    color: $colorEx;
+    background-color: khaki;
+    font-size: 30px;
+}
+.clas1,.clas4{
+    @include color(hotpink)
+}
+.clas2,.clas5{
+    @include color(green)
+}
+.clas3,.clas6{
+    @include color(gold)
+}
+@import 'reset';
+body {
+  font: 100% Helvetica, sans-serif;
+  background-color : aqua;
+}
+@media (max-width:1024px){
+    .asd{
+        color: aquamarine;
+    }
+    .asd1{
+        color: khaki;
+    }
+    .asd2{
+        color: hotpink;
+    }
+}
+@media (max-width:768px){
+    .asd{
+        color: blue;
+    }
+    .asd1{
+        color: blueviolet;
+    }
+    .asd2{
+        color: cadetblue;
+    }
+}
+@media (max-width:375px){
+    .asd{
+        color: green;
+    }
+    .asd1{
+        color: black;
+    }
+    .asd2{
+        color: firebrick;
+    }
+}
